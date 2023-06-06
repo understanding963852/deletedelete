@@ -18,7 +18,7 @@ function BlogForm({ editing }) {
     //console.log(title, body);
     if (editing) {
       axios
-        .patch(`http://localhost:3004/posts/${id}`, {
+        .patch(`https://my-json-server.typicode.com/understanding963852/deletedelete/posts/${id}`, {
           title,
           body,
           publish,
