@@ -44,7 +44,7 @@ function BlogForm({ editing }) {
 
   useEffect(() => {
     if (editing) {
-      axios.get(`http://localhost:3004/posts/${id}`).then((res) => {
+      axios.get(`https://my-json-server.typicode.com/understanding963852/deletedelete/posts/${id}`).then((res) => {
         console.log(res);
         setTitle(res.data.title);
         setBody(res.data.body);
