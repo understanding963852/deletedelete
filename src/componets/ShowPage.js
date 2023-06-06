@@ -10,7 +10,7 @@ const ShowPage = () => {
   const [loading, setLoading] = useState(true);
 
   const getPosts = (id) => {
-    axios.get(`http://localhost:3004/posts/${id}`).then((res) => {
+    axios.get(`https://my-json-server.typicode.com/understanding963852/deletedelete/posts/${id}`).then((res) => {
       console.log(res);
       setPost(res.data);
       setLoading(false);
