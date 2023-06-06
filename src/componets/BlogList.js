@@ -12,7 +12,7 @@ const BlogList = ({ isAdmin }) => {
   const navigate = useNavigate();
 
   const getPost = () => {
-    axios.get(" http://localhost:3004/posts").then((res) => {
+    axios.get("https://my-json-server.typicode.com/understanding963852/deletedelete/posts").then((res) => {
       //받아온 데이터를 사용하기위해서는 .then를 사용해야하고
       //.then(함수)  //then(()=>{})
       //받아온 데이터가 res에 들어간다//response를 줄여서
@@ -29,7 +29,7 @@ const BlogList = ({ isAdmin }) => {
   const deleteBlog = (e, id) => {
     e.stopPropagation();
     console.log("삭제");
-    axios.delete(`http://localhost:3004/posts/${id}`).then(() => {
+    axios.delete(`https://my-json-server.typicode.com/understanding963852/deletedelete/posts/${id}`).then(() => {
       setPosts((prevPosts) => prevPosts.filter((post) => post.id !== id));
     });
   };
